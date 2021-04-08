@@ -21,8 +21,27 @@
         <hr class="my-4">
         <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
     </header>
-
-    <hr>
+  </hr>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="topNavbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Last Searched</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
     <form class='bg-light p-5 border custom-form' id="inputForm"> 
         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
         <select class="custom-select my-1 mr-sm-2" id="cusineSelector">
