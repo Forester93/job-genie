@@ -9,12 +9,3 @@ function handleSubmit(e) {
 }
 
 formEl.addEventListener("submit", handleSubmit)
-
-function myFunction(){
-    var x = document.getElementById("topNavbar");
-    if (x.className === "navbar") {
-        x.className += "responsive";
-    } else {
-        x.className = "navbar";
-    }
-}
