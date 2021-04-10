@@ -1,11 +1,61 @@
+/* global variable definitions */
+:root {
+  --primary-color: #1a1a19;
+  --secondary-color: #393b19;
+  --font-primary: Georgia, 'Times New Roman', Times, Serif;
+  --font-secondary: Verdana, Tahoma, sans-serif;    
+}
+
 /*defining variables*/
+
+.jumbotron {
+  border-radius: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color:rgb(222, 226, 210);
+}
 
 header h1 {
   font-family: "Pacifico", cursive;
+  text-align: center;
+  text-shadow: 2px 2px #92731e;
+}
+
+header p {
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-style: italic;
+}
+
+nav div ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav div ul li {
+  margin: 0 5px;
+  padding: 5px 5px;
+  font-size: 1.8vw;
+}
+
+nav div ul li a {
+  font-size: 15px;
+  padding: 5px 5px;
+  font-family: var(--font-secondary);
+  border-bottom: 2px solid var(--primary-color);
+  border-radius: 5px; 
+  background-color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.navbar .nav-item {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .custom-text {
-  margin-left: -25px;
+  margin-left: -10px;
   /* margin-right: -5%; */
 }
 
@@ -13,7 +63,7 @@ header h1 {
   margin-top: 2vh;
 }
 
-#topNavbar .active {
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.customform {
+  border-radius: 10px;
 }
+
