@@ -1,5 +1,7 @@
 const locationInputEl = document.getElementById("locationInput");
 const formEl = document.getElementById("inputForm");
+const searchButton = $("#searchBtn");
+const clearBtn = $("#clear");
 
 
 function handleSubmit(e) {
@@ -10,3 +12,5 @@ function handleSubmit(e) {
 
 formEl.addEventListener("submit", handleSubmit)
 
+searchButton.on("click", searchButtonClicked);
+clearBtn.on("click",clearSearches);    
