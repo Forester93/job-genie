@@ -3,29 +3,20 @@ const formEl = document.getElementById("inputForm");
 const searchButton = $("#searchBtn");
 const clearBtn = $("#clear");
 
-
+function init() {
+    formEl.addEventListener("submit", handleSubmit)
+}
 
 function handleSubmit(e) {
     e.preventDefault();
-    alert(locationInputEl.value);
 
-    // localStorage.setItem(JSON.stringify(/*put cuisine id and lat and long object here */));
-    window.location.href = "./results.html?q=0&latitude=" + locationInputEl.getAttribute('data-lat') +'&long='+locationInputEl.getAttribute('data-lon')+'&id='+'100';
+    //Put lat, lon, & cuisine id into an object and assign to a variable called data 
+    //Store data in localstore
+    const data = {}
+
+    window.location.href = `./results.html?q=0&latitude=${data.latitude}&long=${data.longitude}&id='+'100`;
 }
 
-formEl.addEventListener("submit", handleSubmit)
-
-searchButton.on("click", searchButtonClicked);
-clearBtn.on("click",clearSearches);    
-
-
-// let lastSearched = {
-//     lat: '155',
-//     long: '22',
-//     cuisineId:'144'
-// }
-
-// function returnLastSearch(){
-
-//     let lastSearchParams= JSON.parse( localStorage.getItem(''))
-// }
+$(document).ready(() => {
+    init();
+})
