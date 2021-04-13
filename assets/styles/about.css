@@ -1,5 +1,49 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
-  background-color: cadetblue;
+	background-color: #3b3838;
+}
+
+.card-body {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    background-color: #e0e0e0;
+    text-align: center;
+}
+
+/* Font Styling */
+h2 {
+	color: #1b484d;
+  font-style: bold;
+  font-size: 30px;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, Serif;
+  font-size: 15px;
+}
+
+/* Content Sections */
+
+.mid-section {
+	padding: 0;
+	background-color: #494545;
+	padding: 20px;
+	margin-bottom: 10px;
+  border-radius: 10px;
+  
+}
+
+.mid-bc {
+	background-color: #f7efef;
+}
+
+.quote-holder {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0;
+	text-align: center;
 }
