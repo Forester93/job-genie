@@ -85,7 +85,7 @@ function buildPageOld(data){
 // alert(resultLong);
 // alert(cuisineId);
 
-fetch('https://developers.zomato.com/api/v2.1/geocode?lat='+resultLat +'&lon='+resultLong, {
+fetch('https://developers.zomato.com/api/v2.1/search?entity_type=city&lat='+resultLat +'&lon='+resultLong+'&cuisine='+cuisineId+'&count=6' +'&sort=real_distance', {
   // The browser fetches the resource from the remote server without first looking in the cache.
   // The browser will then update the cache with the downloaded resource.
   headers: {
@@ -99,6 +99,9 @@ fetch('https://developers.zomato.com/api/v2.1/geocode?lat='+resultLat +'&lon='+r
   })
   .then(function (data) {
     console.log(data.restaurants);
-    // buildPage(data);
+    buildPage(data);
 
   });
+
+
+  
