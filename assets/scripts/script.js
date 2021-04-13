@@ -1,4 +1,4 @@
-const locationInputEl = document.getElementById("locationInput");
+
 const formEl = document.getElementById("inputForm");
 const searchButton = $("#searchBtn");
 const clearBtn = $("#clear");
@@ -10,9 +10,13 @@ function init() {
 function handleSubmit(e) {
     e.preventDefault();
 
-    //Put lat, lon, & cuisine id into an object and assign to a variable called data 
-    //Store data in localstore
-    const data = {}
+    //Get the data-lat and data-lon information from the textfield
+    const locationInputEl = document.getElementById("locationInput");
+    const data = {
+        latitude: locationInputEl.getAttribute("data-lat"),
+        longitude: locationInputEl.getAttribute('data-lon')
+    }
+    localStorage.setItem("restaurant-genie", JSON.stringify(data));
 
     window.location.href = `./results.html?q=0&latitude=${data.latitude}&long=${data.longitude}&id='+'100`;
 }
