@@ -18,7 +18,7 @@ function handleSubmit(e) {
     const data = {
         latitude: locationInputEl.getAttribute("data-lat"),
         longitude: locationInputEl.getAttribute('data-lon'),
-        cuisineId: selectedCuisineVal
+        jobDescription: selectedCuisineVal
     }
     localStorage.setItem("restaurant-genie", JSON.stringify(data));
 
