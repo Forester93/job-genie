@@ -2,16 +2,16 @@ let resultsSection=$('#display-results');
 
 function buildPage(data){
 
-    for(let i=1;i<data.restaurants.length;i++){
-        let restaurant=
+    for(let i in data){
+        let job=
                 $('<div>')
-                .addClass('col-md-4 my-2')
+                .addClass('col-md-6 my-2')
                 .append($('<div>')
                     .addClass('front-imgblock')
                     .append($('<div>')
                         .addClass('front-img')
                         .append($('<a>')
-                            .attr('href','Restaurant Address Here')
+                            .attr('href',data[i].company_url)
                             .append($('<img>')
                                 .attr('src','./assets/images/sample.jpg')
                                 .attr('alt','Results Image')
@@ -21,20 +21,20 @@ function buildPage(data){
                     .append($('<div>')
                         .addClass('front-text')
                         .append($('<h4>')
-                            .text(data.restaurants[i].restaurant.name)
+                            .text(data[i].title)
                         )
                         .append($('<p>')
-                            .text(data.restaurants[i].restaurant.location.address)
+                            .text(data[i].description)
                         )
 
                         .append($('<span>')
                             .addClass('card col-5-body cuisines')
-                            .text("Cuisines Offered:"+data.restaurants[i].restaurant.cuisines)
+                            .text("Type:"+data[i].type)
                         )
                     )
                 )
 
-            resultsSection.append(restaurant);
+            resultsSection.append(job);
     }
 }
 
@@ -43,20 +43,21 @@ const dataJSON = localStorage.getItem("restaurant-genie");
 const data = JSON.parse(dataJSON);
 const resultLat = data.latitude;
 const resultLong= data.longitude;
-const cuisineId = data.cuisineId;
+const jobDescription = data.jobDescription;
 
-alert('URL CONSTRUCTED (LAT & LON FROM DATASTORE): https://developers.zomato.com/api/v2.1/search?entity_type=city&lat='+resultLat +'&lon='+resultLong+'&cuisine='+cuisineId+'&count=6' +'&sort=real_distance');
+// alert('URL CONSTRUCTED (LAT & LON FROM DATASTORE): https://developers.zomato.com/api/v2.1/search?entity_type=city&lat='+resultLat +'&lon='+resultLong+'&cuisine='+cuisineId+'&count=6' +'&sort=real_distance');
 
 
-fetch('https://developers.zomato.com/api/v2.1/search?entity_type=city&lat='+resultLat +'&lon='+resultLong+'&cuisine='+cuisineId+'&count=6' +'&sort=real_distance', {
+fetch('https://jobs.github.com/positions.json?lat='+resultLat+'&long='+resultLong
+,{
   // The browser fetches the resource from the remote server without first looking in the cache.
   // The browser will then update the cache with the downloaded resource.
   headers: {
-  'user-key': '7749b19667964b87a3efc739e254ada2',
-  'accept': 'application/json'
+    'Access-Control-Allow-Origin': '*'
   }
   
-})
+} 
+)
   .then(function (response) {
     return response.json();
   })
