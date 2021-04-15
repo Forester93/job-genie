@@ -1,21 +1,21 @@
 /* Section Styling */
 
 .img-container {
-	padding: 0;
+  padding: 0;
 }
 
 /* Content Sections */
 
 .mid-section {
-	padding: 0;
-	background-color: #bdbdbd;
-	padding: 20px;
-	margin-bottom: 10px;
-    border-radius: 10px;
+  padding: 0;
+  background-color: #bdbdbd;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .mid-bc {
-	background-color: #bdbdbd;
+  background-color: #bdbdbd;
 }
 
 /* Index */
@@ -41,7 +41,8 @@
 .front-img a img {
 	height: 100%;
 	width: 100%;
-}
+=======
+
 
 .front-text ul {
 	border-radius: 5px;
