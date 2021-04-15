@@ -44,7 +44,7 @@ let url='';
 if (jobDescription=='All Programming Jobs'){
     url='https://jobs.github.com/positions.json?lat='+resultLat+'&long='+resultLong;
 }else{
-    url='https://jobs.github.com/positions.json?description='+jobDescription+'lat='+resultLat+'&long='+resultLong;
+    url='https://jobs.github.com/positions.json?description='+jobDescription+'&lat='+resultLat+'&long='+resultLong;
 }
 
 alert(url);
