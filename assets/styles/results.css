@@ -21,30 +21,41 @@
 /* Index */
 .front-imgblock {
 	padding: 30px;
-	background-color: #e0e0e0;
+	background-color: #e7e8eb;
 	text-align: center;
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: Verdana, Tahoma, sans-serif;
 	font-style: bold;
+	border-radius: 10px;
 }
 
 .front-img {
 	padding: 0;
-	background-color: #bdbdbd;
+	background-color: #f8f8f8;
 	padding: 20px;
 	margin-bottom: 10px;
     border-radius: 10px;
+	border-style: outset;
+	box-shadow: 0px 1px 0px 1px rgb(44, 43, 43);
 }
 
 .front-img a img {
 	height: 100%;
 	width: 100%;
-	border-radius: 10px;
 }
+
+.front-text ul {
+	border-radius: 5px;
+} 
 
 .front-text {
 	padding-top: 20px;
 	text-align: center;
 	font-weight: 400;
+	background-color: #eff2f5;
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 12px;
+	border-radius: 10px;
+	border-style:groove;
 }
 
 .front-text h4 {
@@ -52,5 +63,9 @@
 }
 
 .custom-anchor {
-	font-size: 200% !important;
+	font-size: 100% !important;
+}
+
+.position {
+	padding: 10px;
 }
