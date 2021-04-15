@@ -11,6 +11,7 @@ function buildPage(data){
                     .append($('<div>')
                         .addClass('front-img')
                         .append($('<a>')
+                            .addClass('<custom-anchor>')
                             .attr('href',data[i].company_url)
                             .text(data[i].company)
                             )
