@@ -5,7 +5,7 @@ function buildPage(data){
     for(let i in data){
         let job=
                 $('<div>')
-                .addClass('col-md-9 my-2 border')
+                .addClass('col my-2')
                 .append($('<div>')
                     .addClass('front-imgblock')
                     .append($('<div>')
@@ -23,7 +23,7 @@ function buildPage(data){
                         )
                         .html(data[i].description)
                         .append($('<span>')
-                            .addClass('card col-5-body cuisines')
+                            .addClass('card col-5-body jobs')
                             .text("Type:"+data[i].type)
                         )
                     )
@@ -33,7 +33,7 @@ function buildPage(data){
 }
 
 //TODO: Do a check if local storage doesn't exist
-const dataJSON = localStorage.getItem("career-genie");
+const dataJSON = localStorage.getItem("restaurant-genie");
 const data = JSON.parse(dataJSON);
 const resultLat = data.latitude;
 const resultLong= data.longitude;
