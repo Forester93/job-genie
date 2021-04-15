@@ -5,12 +5,13 @@ function buildPage(data){
     for(let i in data){
         let job=
                 $('<div>')
-                .addClass('col-md-9 my-2 border')
+                .addClass('col my-2')
                 .append($('<div>')
                     .addClass('front-imgblock')
                     .append($('<div>')
                         .addClass('front-img')
                         .append($('<a>')
+                            .addClass('custom-anchor')
                             .attr('href',data[i].company_url)
                             .text(data[i].company)
                             )
@@ -25,7 +26,8 @@ function buildPage(data){
                             .html(data[i].description)
                         )
                         .append($('<span>')
-                            .addClass('card col-5-body cuisines')
+                            .addClass('position')
+                            .addClass('card col-5-body jobs')
                             .text("Type:"+data[i].type)
                         )
                     )
@@ -53,6 +55,7 @@ if (jobDescription=='All Programming Jobs'){
 }else{
     url='https://jobs.github.com/positions.json?description='+jobDescription+'&lat='+resultLat+'&long='+resultLong;
 }
+
 
 alert(url);
 
