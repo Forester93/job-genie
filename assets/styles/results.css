@@ -1,41 +1,41 @@
 /* Section Styling */
 
 .img-container {
-	padding: 0;
+  padding: 0;
 }
 
 /* Content Sections */
 
 .mid-section {
-	padding: 0;
-	background-color: #bdbdbd;
-	padding: 20px;
-	margin-bottom: 10px;
-    border-radius: 10px;
+  padding: 0;
+  background-color: #bdbdbd;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .mid-bc {
-	background-color: #bdbdbd;
+  background-color: #bdbdbd;
 }
 
 /* Index */
 .front-imgblock {
-	padding: 25px;
-	background-color: #e0e0e0;
+  padding: 25px;
+  background-color: #e0e0e0;
 }
 
 .front-img a img {
-	height: 100%;
-	width: 100%;
-	border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .front-text {
-	padding-top: 20px;
-	text-align: center;
-	font-weight: 400;
+  padding-top: 20px;
+  text-align: center;
+  font-weight: 400;
 }
 
 .front-text h4 {
-	font-weight: 600;
+  font-weight: 600;
 }

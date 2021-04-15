@@ -48,25 +48,25 @@
       <h2 class="lead">Your next big move...</h2>
 
         <!-- enter location -->
-        <div class="custom-control custom-checkbox my-1 mr-sm-2">
-            <input type='text' class='form-control-plaintext border-dark custom-text bg-light' id="locationInput" placeholder="Enter your location">
-            <input type="checkbox" class="custom-control-input" id="preferenceCheckbox">
-        </div>
-      
+      <div class="custom-control custom-checkbox my-1 mr-sm-2">
+        <input type='text' class='form-control-plaintext border-dark custom-text bg-light' id="locationInput" placeholder="Enter your location">
+        
         <!-- drop down for cuisine -->
-        <!-- <label class="my-1 mr-2" for="inlineFormCustomSelectPref"><strong>Preference</strong></label> -->
-        <select class="custom-select my-1 mr-sm-2 cuisineSelector">
+        <select class="custom-select my-2 mr-sm-2 cuisineSelector">
           <option selected>All Programming Jobs</option>
           <option value="JavaScript">JavaScript</option>
           <option value="Python">Python</option>
           <option value="Ruby">Ruby</option>
           <option value="React">React</option>
         </select>
-        <!-- <label class="custom-control-label text-white" for="customControlInline"><small>Remember my preference</small></label> -->
-        <br><hr>
-        <button type="submit" class="btn btn-primary my-1">Submit</button>
-        <button type="reset" class="btn btn-primary my-1">Reset</button>
-      </form>
+        
+        <!-- Submit & Reset buttons -->
+        <div class="mt-3">
+          <button type="submit" class="btn btn-primary my-1">Submit</button>
+          <button type="reset" class="btn btn-primary my-1">Reset</button>
+        </div>
+      </div>
+    </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

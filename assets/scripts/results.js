@@ -35,6 +35,11 @@ function buildPage(data){
 }
 
 //TODO: Do a check if local storage doesn't exist
+
+if(!localStorage.getItem('restaurant-genie')) {
+    alert('No saved searches were found in this browsing session. Please submit a search query');
+    window.location.href='index.html';
+}
 const dataJSON = localStorage.getItem("restaurant-genie");
 const data = JSON.parse(dataJSON);
 const resultLat = data.latitude;
@@ -63,6 +68,11 @@ fetch(`https://api.codetabs.com/v1/proxy?quest=${url}`
     return response.json();
   })
   .then(function (data) {
+    if(data.length==0){
+        alert('No results found. Please refine your search results');
+        window.location.href='index.html';
+        return;
+    }
     buildPage(data);
 
   });
