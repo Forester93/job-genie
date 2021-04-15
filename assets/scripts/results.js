@@ -33,7 +33,7 @@ function buildPage(data){
 }
 
 //TODO: Do a check if local storage doesn't exist
-const dataJSON = localStorage.getItem("restaurant-genie");
+const dataJSON = localStorage.getItem("career-genie");
 const data = JSON.parse(dataJSON);
 const resultLat = data.latitude;
 const resultLong= data.longitude;
@@ -46,6 +46,7 @@ if (jobDescription=='All Programming Jobs'){
 }else{
     url='https://jobs.github.com/positions.json?description='+jobDescription+'lat='+resultLat+'&long='+resultLong;
 }
+
 
 alert(url);
 
