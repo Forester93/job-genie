@@ -20,7 +20,7 @@ function handleSubmit(e) {
     const locationInputEl = document.getElementById("locationInput");
     if(!validLocation(locationInputEl)) 
     {
-        window.alert("Please enter a location to perform a search");
+        $('#location-modal').modal('show');
         return;
     }
     
