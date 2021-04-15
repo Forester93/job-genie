@@ -21,9 +21,9 @@ This application helps users look for jobs that are listed on Github in a specif
 | Name            | GitHub Username | Email                    |
 | --------------- | --------------- | ------------------------ |
 | Mark Forester   | forester93      | markforester93@gmail.com |
-| Diana Koeswanto | dianakoeswanto  |                          |
-| Jin Hong        | jhong1016       |                          |
-| Sandeep GC      | jhong1016       |                          |
+| Diana Koeswanto | dianakoeswanto  | N/A                      |
+| Jin Hong        | jhong1016       | N/A                      |
+| Sandeep GC      | sgc1992         | N/A                      |
 
 ## User Story
 
