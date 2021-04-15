@@ -61,14 +61,17 @@ nav div ul li a {
 }
 
 .custom-text {
-  margin-left: -10px;
   /* margin-right: -5%; */
+  width: 100%;
+  padding: .375rem 1.75rem .375rem .75rem;
+  border-radius: 0.25rem;
 }
 
 .custom-form * {
   margin-top: 2vh;
+  border-radius: 10px;
 }
 
-.customform {
-  border-radius: 10px;
+.custom-select {
+  margin-bottom: 30px;
 }

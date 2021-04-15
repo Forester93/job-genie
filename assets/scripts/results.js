@@ -22,7 +22,9 @@ function buildPage(data){
                         .append($('<h4>')
                             .text(data[i].title)
                         )
-                        .html(data[i].description)
+                        .append($('<div>')
+                            .html(data[i].description)
+                        )
                         .append($('<span>')
                             .addClass('position')
                             .addClass('card col-5-body jobs')
@@ -35,6 +37,11 @@ function buildPage(data){
 }
 
 //TODO: Do a check if local storage doesn't exist
+
+if(!localStorage.getItem('restaurant-genie')) {
+    alert('No saved searches were found in this browsing session. Please submit a search query');
+    window.location.href='index.html';
+}
 const dataJSON = localStorage.getItem("restaurant-genie");
 const data = JSON.parse(dataJSON);
 const resultLat = data.latitude;
@@ -46,7 +53,7 @@ let url='';
 if (jobDescription=='All Programming Jobs'){
     url='https://jobs.github.com/positions.json?lat='+resultLat+'&long='+resultLong;
 }else{
-    url='https://jobs.github.com/positions.json?description='+jobDescription+'lat='+resultLat+'&long='+resultLong;
+    url='https://jobs.github.com/positions.json?description='+jobDescription+'&lat='+resultLat+'&long='+resultLong;
 }
 
 
@@ -64,6 +71,11 @@ fetch(`https://api.codetabs.com/v1/proxy?quest=${url}`
     return response.json();
   })
   .then(function (data) {
+    if(data.length==0){
+        alert('No results found. Please refine your search results');
+        window.location.href='index.html';
+        return;
+    }
     buildPage(data);
 
   });
