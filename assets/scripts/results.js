@@ -1,15 +1,19 @@
 let resultsModalBodyEl = $("#results-modal-body");
+let jobDescription = "";
+let locationName = "";
 
 /**
  * Constructs the page with results 
  */
 function buildPage(data){
+    const resultsHeader = $('#results-header');
+    resultsHeader.html(`${jobDescription} - ${locationName}`);
+
     const resultsSection=$('#display-results');
-    
     for(let i in data){
         let job=
                 $('<div>')
-                .addClass('col my-2')
+                .addClass('col my-3')
                 .append($('<div>')
                     .addClass('front-imgblock')
                     .append($('<div>')
@@ -84,7 +88,8 @@ function initialize() {
     const data = JSON.parse(dataJSON);
     const resultLat = data.latitude;
     const resultLong= data.longitude;
-    const jobDescription = data.jobDescription;
+    jobDescription = data.jobDescription;
+    locationName = data.locationName;
 
     //Construct URL
     let url='';

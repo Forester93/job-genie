@@ -7,15 +7,10 @@
 /* Content Sections */
 
 .mid-section {
-  padding: 0;
-  background-color: #bdbdbd;
+  background-color: #6c757d;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 10px;
-}
-
-.mid-bc {
-  background-color: #bdbdbd;
 }
 
 /* Index */
@@ -69,4 +64,8 @@
 
 .position {
   padding: 10px;
+}
+
+.results {
+  margin: auto;
 }
