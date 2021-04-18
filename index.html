@@ -48,36 +48,32 @@
         </div>
     </nav>
 
-    <form class='bg-secondary p-5 border custom-form' id="inputForm">
-      <h2 class="lead">Your next big move...</h2>
-
-      <!-- enter location -->
-      <section>
-        <div class="custom-control custom-checkbox my-1 mr-sm-2">
-          <input type='text' class='form-control-plaintext border-dark custom-text bg-light' id="locationInput"
-            placeholder="Enter your location">
-      </section>
-
-      <!-- drop down for cuisine -->
-      <section>
-        <select class="custom-select my-2 mr-sm-2 cuisineSelector">
-          <option selected>All Programming Jobs</option>
-          <option value="JavaScript">JavaScript</option>
-          <option value="Python">Python</option>
-          <option value="Ruby">Ruby</option>
-          <option value="React">React</option>
-        </select>
-      </section>
-
-      <!-- Submit & Reset buttons -->
-      <section>
-        <div class="mt-3">
-          <button type="submit" class="btn btn-primary my-1">Submit</button>
-          <button type="reset" class="btn btn-primary my-1">Reset</button>
-        </div>
-      </section>
-    </form>
-
+    <section>
+      <form class='bg-secondary p-5 border custom-form' id="inputForm">
+        <h2 class="lead">Your next big move...</h2>
+  
+        <!-- enter location -->
+          <div class="custom-control custom-checkbox my-1 mr-sm-2">
+            <input type='text' class='form-control-plaintext border-dark custom-text bg-light' id="locationInput"
+              placeholder="Enter your location">
+  
+        <!-- drop down for cuisine -->
+          <select class="custom-select my-2 mr-sm-2 cuisineSelector">
+            <option selected>All Programming Jobs</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="Ruby">Ruby</option>
+            <option value="React">React</option>
+          </select>
+  
+        <!-- Submit & Reset buttons -->
+          <div class="mt-3">
+            <button type="submit" class="btn btn-primary my-1">Submit</button>
+            <button type="reset" class="btn btn-primary my-1">Reset</button>
+          </div>
+      </form>
+    </section>
+    
     <section>
       <div class="modal fade" tabindex="-1" role="dialog" id="location-modal">
         <div class="modal-dialog" role="document">
@@ -90,7 +86,7 @@
             </div>
             <div class="modal-body">
               <p>Please enter a location to perform a search</p>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>

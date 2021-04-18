@@ -1,7 +1,11 @@
-let resultsSection=$('#display-results');
+let resultsModalBodyEl = $("#results-modal-body");
 
+/**
+ * Constructs the page with results 
+ */
 function buildPage(data){
-
+    const resultsSection=$('#display-results');
+    
     for(let i in data){
         let job=
                 $('<div>')
@@ -36,46 +40,63 @@ function buildPage(data){
     }
 }
 
-//TODO: Do a check if local storage doesn't exist
-
-if(!localStorage.getItem('restaurant-genie')) {
-    alert('No saved searches were found in this browsing session. Please submit a search query');
-    window.location.href='index.html';
-}
-const dataJSON = localStorage.getItem("restaurant-genie");
-const data = JSON.parse(dataJSON);
-const resultLat = data.latitude;
-const resultLong= data.longitude;
-const jobDescription = data.jobDescription;
-
-// alert('URL CONSTRUCTED (LAT & LON FROM DATASTORE): https://developers.zomato.com/api/v2.1/search?entity_type=city&lat='+resultLat +'&lon='+resultLong+'&cuisine='+cuisineId+'&count=6' +'&sort=real_distance');
-let url='';
-if (jobDescription=='All Programming Jobs'){
-    url='https://jobs.github.com/positions.json?lat='+resultLat+'&long='+resultLong;
-}else{
-    url='https://jobs.github.com/positions.json?description='+jobDescription+'&lat='+resultLat+'&long='+resultLong;
+/**
+ * Fetch the constructed URL through a proxy.
+ */
+function fetchJobs(url) {
+    fetch(`https://api.codetabs.com/v1/proxy?quest=${url}`
+    )
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then((results) => checkResults(results));
 }
 
-
-alert(url);
-
-fetch(`https://api.codetabs.com/v1/proxy?quest=${url}`
-// ,{
-//   // The browser fetches the resource from the remote server without first looking in the cache.
-//   // The browser will then update the cache with the downloaded resource.
-// //   mode: "no-cors"
-// } 
-)
-  .then(function (response) {
-    console.log(response);
-    return response.json();
-  })
-  .then(function (data) {
-    if(data.length==0){
-        alert('No results found. Please refine your search results');
-        window.location.href='index.html';
-        return;
+/**
+ * Check whether there are results. If results exist, display them. Otherwise, show modal popup
+ * and redirect them to index.html
+ */
+function checkResults(results) {
+    if(results.length==0){
+        resultsModalBodyEl.html('No results found. Please refine your search results');
+        $("#results-modal").modal('show');
     }
-    buildPage(data);
+    buildPage(results);
+}
 
-  });
+/**
+ * Initializes the results page
+ */
+function initialize() {
+    $('#redirect-button').on('click', function() {
+        window.location.href = "index.html";
+    });
+
+    //If no previous searches, show modal
+    if(!localStorage.getItem('restaurant-genie')) {
+        resultsModalBodyEl.html('No saved searches were found in this browsing session. Please submit a search query');
+        $("#results-modal").modal('show');
+    } 
+
+    //Retrieve local store
+    const dataJSON = localStorage.getItem("restaurant-genie");
+    const data = JSON.parse(dataJSON);
+    const resultLat = data.latitude;
+    const resultLong= data.longitude;
+    const jobDescription = data.jobDescription;
+
+    //Construct URL
+    let url='';
+    if (jobDescription=='All Programming Jobs'){
+        url='https://jobs.github.com/positions.json?lat='+resultLat+'&long='+resultLong;
+    } else {
+        url='https://jobs.github.com/positions.json?description='+jobDescription+'&lat='+resultLat+'&long='+resultLong;
+    }
+
+    fetchJobs(url);
+}
+
+$(document).ready(() => {
+    initialize();
+})
