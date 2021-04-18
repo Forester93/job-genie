@@ -66,7 +66,7 @@ function fetchJobs(url) {
  */
 function checkResults(results) {
     if(results.length==0){
-        resultsModalBodyEl.html(`No results found for ${jobDescription} in ${locationName}. Please refine your search results`);
+        resultsModalBodyEl.html(`No results found for "${jobDescription} in ${locationName}". <br/><br/>Please refine your search results.`);
         $("#results-modal").modal('show');
         return;
     }
@@ -83,7 +83,7 @@ function initialize() {
 
     //If no previous searches, show modal
     if(!localStorage.getItem('restaurant-genie')) {
-        resultsModalBodyEl.html('No saved searches were found in this browsing session. Please submit a search query');
+        resultsModalBodyEl.html('No saved searches were found in this browsing session. Please submit a search query.');
         $("#results-modal").modal('show');
     } 
 
