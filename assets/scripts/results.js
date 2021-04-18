@@ -1,4 +1,5 @@
 let resultsModalBodyEl = $("#results-modal-body");
+let spinnerEl = $(".spinner-border");
 let jobDescription = "";
 let locationName = "";
 
@@ -6,6 +7,8 @@ let locationName = "";
  * Constructs the page with results 
  */
 function buildPage(data){
+    spinnerEl.hide();
+
     const resultsHeader = $('#results-header');
     resultsHeader.html(`${jobDescription} - ${locationName}`);
 
@@ -63,8 +66,9 @@ function fetchJobs(url) {
  */
 function checkResults(results) {
     if(results.length==0){
-        resultsModalBodyEl.html('No results found. Please refine your search results');
+        resultsModalBodyEl.html(`No results found for ${jobDescription} in ${locationName}. Please refine your search results`);
         $("#results-modal").modal('show');
+        return;
     }
     buildPage(results);
 }
@@ -90,6 +94,8 @@ function initialize() {
     const resultLong= data.longitude;
     jobDescription = data.jobDescription;
     locationName = data.locationName;
+
+    spinnerEl.show();
 
     //Construct URL
     let url='';
