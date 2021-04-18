@@ -7,15 +7,10 @@
 /* Content Sections */
 
 .mid-section {
-  padding: 0;
-  background-color: #bdbdbd;
+  background-color: #6c757d;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 10px;
-}
-
-.mid-bc {
-  background-color: #bdbdbd;
 }
 
 /* Index */
@@ -25,7 +20,7 @@
   text-align: center;
   font-family: Verdana, Tahoma, sans-serif;
   font-style: bold;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .front-img {
@@ -55,7 +50,7 @@
   background-color: #eff2f5;
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 12px;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
   border-style: groove;
 }
 
@@ -69,4 +64,13 @@
 
 .position {
   padding: 10px;
+}
+
+.results {
+  margin: auto;
+}
+
+h4 {
+  font-size: medium;
+  padding-bottom: 2rem;
 }

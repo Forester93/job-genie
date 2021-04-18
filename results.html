@@ -26,7 +26,7 @@
       <h1 class="display-4">Career Genie</h1>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topnavbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3" id="topnavbar">
       <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar10">
           <span class="navbar-toggler-icon"></span>
@@ -46,8 +46,16 @@
       </div>
     </nav>
 
-    <section class="bg-light p-5 border row container results align-content-center" id='results-section'>
-      <div class="container-fluid mid-section mid-bc">
+    <section class="row container results align-content-center" id='results-section'>
+      <div class="container-fluid mid-section border">
+        
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+
+        <h2 class="lead" id="results-header"></h2>
         <div class="front-img-container" id='display-results'>
 
         <!-- <div class="card col-5" style="width: 18rem">
@@ -67,6 +75,26 @@
         </div> -->
       
     </section>
+
+    <section>
+      <div class="modal fade" tabindex="-1" role="dialog" id="results-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Search Results</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="results-modal-body"></p>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" id="redirect-button">New Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

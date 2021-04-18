@@ -47,7 +47,8 @@ function addInputsToLocalStore(locationInputEl) {
     const data = {
         latitude: locationInputEl.getAttribute("data-lat"),
         longitude: locationInputEl.getAttribute('data-lon'),
-        jobDescription: selectedCuisineVal
+        jobDescription: selectedCuisineVal,
+        locationName: locationInputEl.value
     }
     localStorage.setItem("restaurant-genie", JSON.stringify(data));
 }
