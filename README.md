@@ -55,3 +55,7 @@ Given that the application has loaded
 When I navigate to "About"  
 Then I am presented with information about the application  
 And information about team members
+
+## Powerpoint Slides Link
+
+https://prezi.com/p/mzpondrwgaru/career-genie/
