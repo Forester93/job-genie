@@ -1,4 +1,4 @@
-# The Job Genie
+# The Career Genie
 
 ## Description
 
@@ -6,11 +6,15 @@ This application helps users look for jobs that are listed on Github in a specif
 
 ## Link to the Deployed Application
 
-[The Job Genie](https://forester93.github.io/job-genie/)
+[The Career Genie](https://forester93.github.io/job-genie/)
 
 ## Link to the Github Repository
 
-[The Job Genie Github Repo](https://github.com/Forester93/job-genie/)
+[The Career Genie Github Repo](https://github.com/Forester93/job-genie/)
+
+## Powerpoint Slides Link
+
+[The Career Genie Project Presentation](https://prezi.com/p/mzpondrwgaru/career-genie/)
 
 ## Screenshot of the Application
 
@@ -55,7 +59,3 @@ Given that the application has loaded
 When I navigate to "About"  
 Then I am presented with information about the application  
 And information about team members
-
-## Powerpoint Slides Link
-
-https://prezi.com/p/mzpondrwgaru/career-genie/
