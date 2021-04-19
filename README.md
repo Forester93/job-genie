@@ -4,6 +4,19 @@
 
 This application helps users look for jobs that are listed on Github in a specific location.
 
+## Elevator Pitch
+
+Your Fetch is my command.  
+Welcome to Career Genie.  
+Often times job search engines return numerous results,  
+many of which are not specific to the search queries.  
+As developers, We decided to solve this problem for developers by developing a service  
+ that only looks for programming jobs in a specified location and can be filtered by a programming language.  
+Given there are many one-stop shops around often selling everything, we decided it would be better to sell you  
+one thing, and work on improving it beyond perfection while doing so.  
+We're an upcoming team from Sydney made of highly motivated  
+very adaptable goal-oriented people who put the end user first.
+
 ## Link to the Deployed Application
 
 [The Career Genie](https://forester93.github.io/job-genie/)
